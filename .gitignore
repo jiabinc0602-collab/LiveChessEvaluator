@@ -3,3 +3,7 @@
 
 # ignores all 2026-05 games zst file
 *.zst
+
+
+# tensors folder containing tensor saved games
+data/tensors/
