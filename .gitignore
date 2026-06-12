@@ -1,0 +1,5 @@
+.venv/
+.env
+
+# ignores all 2026-05 games zst file
+*.zst
