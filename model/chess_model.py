@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 from transformer import Block
 
-class ChessEvaluator:
+class ChessEvaluator(nn.Module):
     def __init__(self, d_model, num_heads, num_layers):
         super().__init__()
         

@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 
 class Head(nn.Module):
-    def __init__(self, n_embd,head_size):
+    def __init__(self, n_embd, head_size):
         super().__init__()
         # K, Q, V Vectors
         self.key = nn.Linear(n_embd, head_size, bias = False)   # (B, T, head_size)
@@ -72,7 +72,7 @@ class Block(nn.Module):
         
         head_size = n_embd // num_heads
 
-        self.multi = MultiHeadAttention(num_heads, head_size)
+        self.multi = MultiHeadAttention(n_embd, num_heads)
         self.feed = FeedForward(n_embd)
         self.ln1 = nn.LayerNorm(n_embd)
         self.ln2 = nn.LayerNorm(n_embd)
