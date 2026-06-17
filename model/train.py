@@ -38,7 +38,7 @@ if __name__ == '__main__':
     d_model = 256
     num_heads = 8
     num_layers = 6
-    batch_size = 1024
+    batch_size = 2048
     lr = 3e-4
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -85,8 +85,8 @@ if __name__ == '__main__':
 
             running_loss += loss.item()
 
-            if batch_idx > 0 and batch_idx % 1000 == 0:
-                avg_loss = running_loss / 1000
+            if batch_idx > 0 and batch_idx % 100 == 0:
+                avg_loss = running_loss / 100
                 print(f"Epoch: {epoch+1}/{epochs} | Batch: {batch_idx} | Avg Loss: {avg_loss:.4f}")
                 running_loss = 0.0
 

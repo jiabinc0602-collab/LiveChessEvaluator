@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from transformer import Block
+from model.transformer import Block
 
 class ChessEvaluator(nn.Module):
     def __init__(self, d_model, num_heads, num_layers):

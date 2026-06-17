@@ -8,3 +8,11 @@
 # tensors folder containing tensor saved games
 data/tensors/
 
+__pycache__/
+
+# pytorch model files
+*.pth
+
+# onnx files
+*.onnx
+*.onnx.data
