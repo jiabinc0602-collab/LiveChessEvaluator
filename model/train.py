@@ -69,6 +69,7 @@ if __name__ == '__main__':
             X_batch = X_batch.to(device)
             Y_batch = Y_batch.to(device)
 
+            # zero gradients
             optimizer.zero_grad()
 
             # forward
